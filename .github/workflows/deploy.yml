@@ -30,8 +30,9 @@ jobs:
         run: bun install
 
       - name: Build project
-        run: bun run build
-        
+        run: bun run --filter web build
+        env:
+          NEXT_PUBLIC_SERVER_URL: ${{ secrets.NEXT_PUBLIC_SERVER_URL || 'https://api.example.com' }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
