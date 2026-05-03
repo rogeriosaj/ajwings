@@ -41,7 +41,7 @@ export default function Home() {
           </div>
           <div className="order-1 md:order-2 flex flex-col items-start text-left">
             <span className="text-secondary font-bold tracking-widest uppercase mb-4 text-sm">Nossa Herança</span>
-            <h2 className="text-4xl md:text-5xl text-serif font-bold mb-6 text-on-surface">The Modern Caravan</h2>
+            <h2 className="text-4xl md:text-5xl text-serif font-bold mb-6 text-on-surface">A Caravana Moderna</h2>
             <p className="text-lg opacity-80 mb-6 leading-relaxed max-w-lg">
               Na AJ Wings, acreditamos que viajar não é apenas ir de um ponto A para um ponto B. É sobre a herança que você descobre ao longo do caminho. Combinamos o peso estrutural da hospitalidade clássica com a fluidez moderna.
             </p>
