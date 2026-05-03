@@ -1,8 +1,10 @@
 import dotenv from "dotenv";
 import { defineConfig } from "drizzle-kit";
 
+import { getDrizzleEnvPath } from "./src/get-drizzle-env-path";
+
 dotenv.config({
-  path: "../../apps/server/.env",
+  path: getDrizzleEnvPath(),
 });
 
 export default defineConfig({
