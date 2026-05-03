@@ -15,7 +15,54 @@
         "typescript": "catalog:",
       },
     },
-    "apps/server": {
+    "backend/api": {
+      "name": "@project/api",
+      "dependencies": {
+        "@project/auth": "workspace:*",
+        "@project/db": "workspace:*",
+        "@project/env": "workspace:*",
+        "@trpc/client": "catalog:",
+        "@trpc/server": "catalog:",
+        "dotenv": "catalog:",
+        "zod": "catalog:",
+      },
+      "devDependencies": {
+        "@project/config": "workspace:*",
+        "elysia": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
+    "backend/auth": {
+      "name": "@project/auth",
+      "dependencies": {
+        "@project/db": "workspace:*",
+        "@project/env": "workspace:*",
+        "better-auth": "catalog:",
+        "dotenv": "catalog:",
+        "zod": "catalog:",
+      },
+      "devDependencies": {
+        "@project/config": "workspace:*",
+        "typescript": "catalog:",
+      },
+    },
+    "backend/db": {
+      "name": "@project/db",
+      "dependencies": {
+        "@project/env": "workspace:*",
+        "dotenv": "catalog:",
+        "drizzle-orm": "^0.45.1",
+        "pg": "^8.17.1",
+        "zod": "catalog:",
+      },
+      "devDependencies": {
+        "@project/config": "workspace:*",
+        "@types/pg": "^8.16.0",
+        "drizzle-kit": "^0.31.8",
+        "typescript": "catalog:",
+      },
+    },
+    "backend/server": {
       "name": "server",
       "dependencies": {
         "@elysiajs/cors": "^1.4.1",
@@ -39,7 +86,31 @@
         "typescript": "catalog:",
       },
     },
-    "apps/web": {
+    "frontend/ui": {
+      "name": "@project/ui",
+      "version": "0.0.0",
+      "dependencies": {
+        "@base-ui/react": "^1.0.0",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "lucide-react": "catalog:",
+        "next-themes": "catalog:",
+        "react": "catalog:",
+        "react-dom": "catalog:",
+        "shadcn": "^3.6.2",
+        "sonner": "catalog:",
+        "tailwind-merge": "^3.3.1",
+        "tw-animate-css": "^1.3.4",
+      },
+      "devDependencies": {
+        "@project/config": "workspace:*",
+        "@types/react": "catalog:",
+        "@types/react-dom": "catalog:",
+        "tailwindcss": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
+    "frontend/web": {
       "name": "web",
       "version": "0.1.0",
       "dependencies": {
@@ -74,58 +145,11 @@
         "typescript": "catalog:",
       },
     },
-    "packages/api": {
-      "name": "@project/api",
-      "dependencies": {
-        "@project/auth": "workspace:*",
-        "@project/db": "workspace:*",
-        "@project/env": "workspace:*",
-        "@trpc/client": "catalog:",
-        "@trpc/server": "catalog:",
-        "dotenv": "catalog:",
-        "zod": "catalog:",
-      },
-      "devDependencies": {
-        "@project/config": "workspace:*",
-        "elysia": "catalog:",
-        "typescript": "catalog:",
-      },
-    },
-    "packages/auth": {
-      "name": "@project/auth",
-      "dependencies": {
-        "@project/db": "workspace:*",
-        "@project/env": "workspace:*",
-        "better-auth": "catalog:",
-        "dotenv": "catalog:",
-        "zod": "catalog:",
-      },
-      "devDependencies": {
-        "@project/config": "workspace:*",
-        "typescript": "catalog:",
-      },
-    },
-    "packages/config": {
+    "shared/config": {
       "name": "@project/config",
       "version": "0.0.0",
     },
-    "packages/db": {
-      "name": "@project/db",
-      "dependencies": {
-        "@project/env": "workspace:*",
-        "dotenv": "catalog:",
-        "drizzle-orm": "^0.45.1",
-        "pg": "^8.17.1",
-        "zod": "catalog:",
-      },
-      "devDependencies": {
-        "@project/config": "workspace:*",
-        "@types/pg": "^8.16.0",
-        "drizzle-kit": "^0.31.8",
-        "typescript": "catalog:",
-      },
-    },
-    "packages/env": {
+    "shared/env": {
       "name": "@project/env",
       "version": "0.0.0",
       "dependencies": {
@@ -137,30 +161,6 @@
       "devDependencies": {
         "@project/config": "workspace:*",
         "@types/bun": "catalog:",
-        "typescript": "catalog:",
-      },
-    },
-    "packages/ui": {
-      "name": "@project/ui",
-      "version": "0.0.0",
-      "dependencies": {
-        "@base-ui/react": "^1.0.0",
-        "class-variance-authority": "^0.7.1",
-        "clsx": "^2.1.1",
-        "lucide-react": "catalog:",
-        "next-themes": "catalog:",
-        "react": "catalog:",
-        "react-dom": "catalog:",
-        "shadcn": "^3.6.2",
-        "sonner": "catalog:",
-        "tailwind-merge": "^3.3.1",
-        "tw-animate-css": "^1.3.4",
-      },
-      "devDependencies": {
-        "@project/config": "workspace:*",
-        "@types/react": "catalog:",
-        "@types/react-dom": "catalog:",
-        "tailwindcss": "catalog:",
         "typescript": "catalog:",
       },
     },
@@ -470,17 +470,17 @@
 
     "@oxc-project/types": ["@oxc-project/types@0.127.0", "", {}, "sha512-aIYXQBo4lCbO4z0R3FHeucQHpF46l2LbMdxRvqvuRuW2OxdnSkcng5B8+K12spgLDj93rtN3+J2Vac/TIO+ciQ=="],
 
-    "@project/api": ["@project/api@workspace:packages/api"],
+    "@project/api": ["@project/api@workspace:backend/api"],
 
-    "@project/auth": ["@project/auth@workspace:packages/auth"],
+    "@project/auth": ["@project/auth@workspace:backend/auth"],
 
-    "@project/config": ["@project/config@workspace:packages/config"],
+    "@project/config": ["@project/config@workspace:shared/config"],
 
-    "@project/db": ["@project/db@workspace:packages/db"],
+    "@project/db": ["@project/db@workspace:backend/db"],
 
-    "@project/env": ["@project/env@workspace:packages/env"],
+    "@project/env": ["@project/env@workspace:shared/env"],
 
-    "@project/ui": ["@project/ui@workspace:packages/ui"],
+    "@project/ui": ["@project/ui@workspace:frontend/ui"],
 
     "@quansync/fs": ["@quansync/fs@1.0.0", "", { "dependencies": { "quansync": "^1.0.0" } }, "sha512-4TJ3DFtlf1L5LDMaM6CanJ/0lckGNtJcMjQ1NAV6zDmA0tEHKZtxNKin8EgPaVX1YzljbxckyT2tJrpQKAtngQ=="],
 
@@ -1192,7 +1192,7 @@
 
     "serve-static": ["serve-static@2.2.1", "", { "dependencies": { "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "parseurl": "^1.3.3", "send": "^1.2.0" } }, "sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw=="],
 
-    "server": ["server@workspace:apps/server"],
+    "server": ["server@workspace:backend/server"],
 
     "set-cookie-parser": ["set-cookie-parser@3.1.0", "", {}, "sha512-kjnC1DXBHcxaOaOXBHBeRtltsDG2nUiUni+jP92M9gYdW12rsmx92UsfpH7o5tDRs7I1ZZPSQJQGv3UaRfCiuw=="],
 
@@ -1324,7 +1324,7 @@
 
     "vary": ["vary@1.1.2", "", {}, "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="],
 
-    "web": ["web@workspace:apps/web"],
+    "web": ["web@workspace:frontend/web"],
 
     "web-streams-polyfill": ["web-streams-polyfill@3.3.3", "", {}, "sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw=="],
 
