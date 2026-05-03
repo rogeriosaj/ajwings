@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#006a62",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#1f4e4f",
+                    "primary": "#735c00",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "primary-container": "#d4af37",
+                    "on-tertiary-fixed": "#002020",
+                    "on-secondary-fixed": "#00201d",
+                    "on-primary-fixed": "#241a00",
+                    "background": "#fbf9f4",
+                    "tertiary-fixed": "#bcebec",
+                    "inverse-on-surface": "#f2f1ec",
+                    "on-surface-variant": "#4d4635",
+                    "surface-container": "#f0eee9",
+                    "inverse-primary": "#e9c349",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#8dbbbc",
+                    "surface-container-high": "#eae8e3",
+                    "surface-tint": "#735c00",
+                    "surface-container-low": "#f5f3ee",
+                    "tertiary-fixed-dim": "#a0cfd0",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#30312e",
+                    "surface": "#fbf9f4",
+                    "surface-bright": "#fbf9f4",
+                    "secondary-container": "#5ef6e6",
+                    "on-tertiary-container": "#1d4c4d",
+                    "on-secondary-container": "#006f66",
+                    "on-background": "#1b1c19",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c19",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-primary-container": "#554300",
+                    "outline": "#7f7663",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffe088",
+                    "tertiary": "#386667",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#d0c5af",
+                    "on-secondary-fixed-variant": "#005049",
+                    "secondary-fixed": "#61f9e9",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#3adccc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .syrian-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5.878 18.09h19.022L39.46 29.18 45.338 47.27 30 36.11 14.662 47.27l5.878-18.09L5.1 18.09h19.022L30 0z' fill='%23735c00' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(27, 28, 25, 0.4), rgba(27, 28, 25, 0.1));
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_32px_48px_rgba(27,28,25,0.05)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold font-['Noto_Serif'] italic text-[#D4AF37]">AJ Wings</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#D4AF37] font-bold border-b-2 border-[#D4AF37] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Destinations</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300 text-sm tracking-wide" href="#">Experiences</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300 text-sm tracking-wide" href="#">Heritage</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300 text-sm tracking-wide" href="#">Journal</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300 text-sm tracking-wide" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-stone-600 hover:text-[#D4AF37] transition-all" data-icon="account_circle">account_circle</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-xl font-bold text-sm tracking-wide scale-102 active:scale-98 transition-all shadow-sm">Book Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Syrian Landscape" class="w-full h-full object-cover" data-alt="Stunning aerial view of the ancient city of Palmyra at sunrise, warm golden light hitting the roman columns and vast desert landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDziMmesUhslGfg5ULnnzcXmocGYFomTj5-Zkjm5SvMo9K6fB-A50lz8FLQBJPciJmoo1007S05jroCSmqzie10Dc6Fao5Cgka0iYD1d8mqol9DouAES1sgAue-StQbTo9itStian7e6dmoLLTx4r73ahSGOf0kDott70Ybe8gMOUv4JW5FIJ8rNAJGLL8LZg63AlZtz9ecLwEJTPw_3MCafYRhOqCfvTiR7TztrsiH8K9xy3XVN6s7P4o0ULiwaEnuNq4iUGQzSdQ"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<span class="text-[#D4AF37] font-semibold tracking-[0.2em] text-sm mb-4 block font-label">A LEGACY OF THE MODERN CARAVAN</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-white leading-[1.1] mb-8">
+                        The Soul of <br/>
+<span class="text-[#D4AF37] italic">The Levant</span>
+</h1>
+<p class="text-white/90 text-xl font-light leading-relaxed mb-10 max-w-xl">
+                        Traverse through time where ancient Silk Road heritage meets modern luxury. Discover the untamed beauty of Syria with AJ Wings.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#40E0D0] text-[#002020] px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2">
+                            Begin the Journey
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
+                            View Heritage Sites
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Destinations - Bento Grid -->
+<section class="py-24 bg-surface syrian-pattern">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">Curated Destinations</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">From the jasmine-scented alleys of Old Damascus to the majestic ruins of Palmyra, we open doors to the most sacred corners of the Levant.</p>
+</div>
+<a class="text-secondary font-bold flex items-center gap-2 group" href="#">
+                        Explore All Destinations
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of the Umayyad Mosque in Damascus with its intricate courtyards and minarets under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeqgvbPZFPVG_bKfPceV9v-SaLoNM-JX6ymplnwyQsR89tyc58j0-ggUsYGLGtWCGgAYGvJoE5NZMMy8ee2KMP8MjJgz-nie-0ZK1BJif7Gqg-vZIpB10oQGGiHmLVLysgKqZpfS6PXi5dsy9IeM4L3yeE4b7ZCex8WMHgSR7RXDZEpQPiZipVo07jhND3IvUVQeo1ZR_ZQ3LX-gpYmDQ4Ep6XarJA9IzCouwwhcEdwxMYtyL8K1tYbYmEsr1QVs0ojiR1PrSD_i8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-[#D4AF37] text-on-primary-container px-3 py-1 rounded-full text-xs font-bold mb-3 inline-block">MOST VISITED</span>
+<h3 class="text-3xl font-headline font-bold text-white">Damascus: The Eternal City</h3>
+<p class="text-white/80 mt-2">Walk through 5,000 years of living history.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Ancient Roman theatre of Bosra in Syria, basalt stone structure under bright daylight with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB89a1_Ld6_5lHH7FFYEenwwvx8eckepP9GIeB9ir9Ff8HWjVaYkFFu8lM3kft6cxgGDGTqyDgHamLMsW9wDMNitGGcP-HzGsS498-xDV5ENgCArcV7Ln9H-BukkPAkCkkwcUPheXfRUjUfuGWO9iUZYlBeizbz54gSx69-GYmZ9QzSord-RzUCDLS1W5JAXLtHlcR_eZzkk4FGlRQVFITL6CwVMRJewpIGsw_NQ4nNflTIWfbbeGG2QUFGHzdV7oONSONaVuH1odU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-2xl font-headline font-bold text-white">Aleppo</h3>
+<p class="text-white/80 mt-2">Citadels and spice souks.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="The medieval castle Krak des Chevaliers standing on a green hill with dramatic storm clouds in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdscb_lC58uiT_v5ruAyxScbHZHiv2uur2SLNkPa4xYb9RZklqzbTtJ91FnBqaWTGqKtngVCz0ag0A8YSziPVrACdv6eyzYw6sdX_MrhFYt_D_FrZyvPz0xzH5E2pSDCl7Qfhh7QmOKlslXh-QRl88vUvwqs4n3v4LLY9pqkBNXGsvb88ZkQw8rML30T98Xny3QstHuADwHGptTZSBKqtBy94ru8zeI9D9V4Em0aM9bbYaBDDeJLJMRbch5-W6mfyjTooLXNyofO4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-2xl font-headline font-bold text-white">Krak des Chevaliers</h3>
+<p class="text-white/80 mt-2">The pinnacle of medieval fortresses.</p>
+</div>
+</div>
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Coastal view of Lattakia, Syria, where the blue Mediterranean water meets the rugged coastline at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBck7pTIa3xsD95Gnp-2h9QM71ZdPnQ2S0H89PdiP_1WIfZ1W0PCBS8Mv6dnzhiFit3bbCfzRRkUBVVaHS2Zpwh7i14JmHZMSKBhz9ByRYZFN_3s7u48hrNdDGLVPXgcgIqJAbTkdBrD4v7eChzk9_mnJ-XFsWzzUd-agvRGFC0wZW1VCYEBWkxH1wMJJ3GwSCNqfEvheTNhhRXKF-upsZdvOEfiA9qVSSE9FTGJbaOhPBZ_66H3M3-EpedqFh9_ihjo6VsjcT7JyU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-3xl font-headline font-bold text-white">The Coastline</h3>
+<p class="text-white/80 mt-2">Mediterranean serenity in Lattakia.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Editorial Layout -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="Close-up of traditional Syrian hospitality, pouring Arabic coffee from an ornate brass dallah into small cups, steam rising softly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRwy11u3zTQ4aAuNmwiBTv-DuqA-TPybGkV67OS_YV5MfA4vm5lZAS-ied3x4wfCOZK8fQ4gL7YNInWOUBoDZOOuyRHgHdPNiA4Cv2qUMG-WIJwqib57PcFfewwr7jVKFnt9K-Whn-knNgD5wEdL5qbqCQI4VO-bU6F2jVIYxbuSVO2eADP4jzJ50-6uKFLJ0fkuAP3CPJ0vJ5SSR5sTIBkBWlYD74koA6ZUoHfgPavSZLbyssdwbfVCSSu2px7UsiNm8dUym1CPI"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary-container rounded-xl -z-10 opacity-20 syrian-pattern"></div>
+<div class="absolute -top-10 -left-10 p-8 bg-white/70 backdrop-blur-md rounded-xl shadow-xl z-20 max-w-[240px]">
+<p class="text-[#D4AF37] font-headline italic text-4xl mb-2">"Ahlan wa Sahlan"</p>
+<p class="text-sm font-medium text-on-surface-variant italic">The sacred vow of Syrian hospitality.</p>
+</div>
+</div>
+<div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8 leading-tight">Heritage Reimagined <br/>for the Global Traveler</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="bg-white p-4 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl" style="font-variation-settings: 'FILL' 1;">mosque</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Architectural Immersion</h4>
+<p class="text-on-surface-variant leading-relaxed">Stay in restored 17th-century palaces where every courtyard tells a story of empires long past.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-white p-4 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-[#40E0D0] text-3xl" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Gastronomic Lineage</h4>
+<p class="text-on-surface-variant leading-relaxed">Dine with families who have preserved the Levant's culinary secrets for generations.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-white p-4 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Bespoke Protection</h4>
+<p class="text-on-surface-variant leading-relaxed">Travel with peace of mind. Our local experts provide seamless logistics and elite security integration.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto bg-stone-900 rounded-[2rem] overflow-hidden relative">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="Luxurious traditional courtyard with a central fountain and hanging plants, glowing warmly under soft evening lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx8NplFI_cBvb9DK4D6JfGR9aIPymM-86g47-AXYp9lqPWk-3lWOb4PPfgsllqNxNguPdQQv86TNacv9fVOJIotBULdtaPR2T7ECS-VXFhV3PYdBuu11ueQ4ghKiBj7YKihkZo1zGxJxVyM6ds1-7vaCq22PJVE31sjvoHdqgiFMgRJMDdiiqpNOIVKae1HklRc5Tg8P7saaOWQfctntaln0g27ltl5_Urtal6Trgm1kQdy3IP1AOxVcVsYqub1LS8LU0NseAw66c"/>
+</div>
+<div class="relative z-10 py-20 px-12 text-center max-w-3xl mx-auto">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-white mb-8">Your Caravan is Waiting.</h2>
+<p class="text-stone-300 text-lg mb-12">Limited expeditions are available for the 2024-25 season. Secure your place in the legacy of modern travel.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-[#40E0D0] text-[#002020] px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+                            Request Private Itinerary
+                        </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
+                            Talk to a Specialist
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full border-t border-stone-200 dark:border-stone-800">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="space-y-6">
+<div class="text-xl font-bold font-['Noto_Serif'] text-[#D4AF37]">AJ Wings</div>
+<p class="text-stone-500 dark:text-stone-400 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">
+                    Dedicated to reviving the spirit of the Silk Road through luxury, heritage-focused travel across the Levant.
+                </p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-[#D4AF37]" data-icon="public">public</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-[#D4AF37]" data-icon="travel_explore">travel_explore</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-[#D4AF37]" data-icon="hub">hub</span>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="font-bold text-sm tracking-widest uppercase text-stone-800 dark:text-stone-200">The Journey</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Destinations</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Heritage Sites</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-bold text-sm tracking-widest uppercase text-stone-800 dark:text-stone-200">Policies</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Travel Policy</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Heritage Conservation</a></li>
+<li><a class="text-[#D4AF37] underline underline-offset-4 font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-bold text-sm tracking-widest uppercase text-stone-800 dark:text-stone-200">The Journal</h5>
+<p class="text-stone-500 dark:text-stone-400 font-['Plus_Jakarta_Sans'] text-sm">Join our newsletter for exclusive historical insights and travel updates.</p>
+<div class="flex">
+<input class="bg-stone-200 dark:bg-stone-900 border-none rounded-l-xl w-full text-sm focus:ring-[#D4AF37]" placeholder="Email" type="email"/>
+<button class="bg-[#D4AF37] text-white px-4 rounded-r-xl">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200 dark:border-stone-800 text-center">
+<p class="text-stone-500 dark:text-stone-400 font-['Plus_Jakarta_Sans'] text-xs tracking-widest">
+                © 2024 AJ Wings. A Legacy of the Modern Caravan.
+            </p>
+</div>
+</footer>
+</body></html>

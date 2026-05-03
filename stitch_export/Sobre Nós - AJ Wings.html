@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#006a62",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed-variant": "#1f4e4f",
+                        "primary": "#735c00",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-variant": "#e4e2dd",
+                        "surface-dim": "#dbdad5",
+                        "primary-container": "#d4af37",
+                        "on-tertiary-fixed": "#002020",
+                        "on-secondary-fixed": "#00201d",
+                        "on-primary-fixed": "#241a00",
+                        "background": "#fbf9f4",
+                        "tertiary-fixed": "#bcebec",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-surface-variant": "#4d4635",
+                        "surface-container": "#f0eee9",
+                        "inverse-primary": "#e9c349",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#8dbbbc",
+                        "surface-container-high": "#eae8e3",
+                        "surface-tint": "#735c00",
+                        "surface-container-low": "#f5f3ee",
+                        "tertiary-fixed-dim": "#a0cfd0",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#30312e",
+                        "surface": "#fbf9f4",
+                        "surface-bright": "#fbf9f4",
+                        "secondary-container": "#5ef6e6",
+                        "on-tertiary-container": "#1d4c4d",
+                        "on-secondary-container": "#006f66",
+                        "on-background": "#1b1c19",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c19",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-primary-container": "#554300",
+                        "outline": "#7f7663",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffe088",
+                        "tertiary": "#386667",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#d0c5af",
+                        "on-secondary-fixed-variant": "#005049",
+                        "secondary-fixed": "#61f9e9",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#3adccc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sepia-effect {
+            filter: sepia(0.8) contrast(1.1) brightness(0.9);
+        }
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23735c00' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_32px_48px_rgba(27,28,25,0.05)] h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+<div class="text-2xl font-bold font-['Noto_Serif'] italic text-[#D4AF37]">AJ Wings</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300" href="#">Destinos</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300" href="#">Experiências</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300" href="#">Herança</a>
+<a class="text-stone-600 dark:text-stone-400 font-['Plus_Jakarta_Sans'] font-medium hover:text-[#40E0D0] transition-colors duration-300" href="#">Diário</a>
+<a class="text-[#D4AF37] font-bold border-b-2 border-[#D4AF37] pb-1 hover:text-[#40E0D0] transition-colors duration-300" href="#">Sobre Nós</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl font-bold scale-102 active:scale-98 transition-all">Reservar Agora</button>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="overflow-hidden">
+<!-- Hero Section: Editorial Header -->
+<section class="relative py-24 md:py-32 px-8 overflow-hidden">
+<div class="pattern-overlay absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl auto relative z-10">
+<div class="flex flex-col items-center text-center">
+<span class="text-secondary font-semibold tracking-[0.2em] uppercase text-sm mb-6">Nosso Legado</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight max-w-4xl tracking-tighter">
+                        Onde a Herança <br/> <span class="italic text-primary">Encontra o Horizonte</span>
+</h1>
+<div class="w-24 h-1 bg-primary-container mt-12 mb-8"></div>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        Uma história nascida nos antigos pátios de Damasco, carregada nas asas da exploração moderna.
+                    </p>
+</div>
+</div>
+</section>
+<!-- The Founders Story: Asymmetric Bento -->
+<section class="max-w-7xl mx-auto px-8 py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Image Block: Sepia Heritage -->
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-xl bg-surface-container-highest">
+<img alt="Mercado Sírio Antigo" class="w-full h-full object-cover sepia-effect" data-alt="vintage sepia photograph of a bustling traditional bazaar in Damascus with intricate stone arches and sunlight filtering through lattices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4_IqapXcdgwHdRJNH3GP2Be9wx5tfHtpmv4f54MlLJ-GH9zBKsb6f_LeH_zVU8TrdccfiNVpqSlahJV7PGHS6E7jvh8ZDUX1j5ODRoJ5d8SVKGSUm1DMIdwdwzhRNOpsYoK6vyPuIWooPZ9w5eEqMYmNjm-OL5SiRk9VchSfsr4OeW_jRPXEFzbB2gFy923FG32UMM88Bc7Ikt19oL-MqmbJ88PtnwyGyZBxMVZcq0THN7_uONwWTRKftVP2hU4Pt82Q1FaZEoI4"/>
+</div>
+<div class="absolute -bottom-6 -right-6 p-6 bg-surface border-l-4 border-primary shadow-2xl max-w-[200px]">
+<p class="font-headline italic text-primary">Est. 1924, <br/> O Legado da Seda</p>
+</div>
+</div>
+<!-- Text Block: The Narrative -->
+<div class="md:col-span-7 md:pl-16">
+<h2 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">Uma Caravana de <span class="text-secondary">Sonhos Compartilhados</span></h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+<p>
+                            A história da AJ Wings começou há mais de um século, à sombra da Mesquita Omíada. Nossos fundadores, gerações de exploradores e mercadores, entenderam que viajar nunca foi apenas sobre o destino — tratava-se da ponte construída entre os corações.
+                        </p>
+<p>
+                            Deixar as ruas perfumadas de jasmim da Síria não foi um fim, mas uma expansão. Trouxemos a filosofia do <span class="italic font-headline">Majlis</span> — o encontro caloroso e hospitaleiro — para o mundo das viagens de luxo modernas.
+                        </p>
+<blockquote class="text-2xl font-headline text-secondary py-6 italic border-l-4 border-secondary-container pl-6 my-8">
+                            "Nós não apenas mostramos o mundo a você; nós o convidamos a entrar em sua alma, tratando cada viajante como um convidado em nossa própria casa."
+                        </blockquote>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Mosaic: Contrast Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div class="max-w-xl">
+<h3 class="font-headline text-4xl mb-4">A Textura da Jornada</h3>
+<p class="text-on-surface-variant">Das pedras ancestrais de Palmira aos horizontes de vidro do amanhã, nossa estética é um diálogo entre eras.</p>
+</div>
+<div class="mt-8 md:mt-0">
+<span class="text-primary-container font-bold text-6xl opacity-20 font-headline select-none">SÍRIA E ALÉM</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+<div class="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
+<img alt="Voo Moderno" class="w-full h-full object-cover" data-alt="dramatic aerial view of a luxury jet wing over Mediterranean turquoise waters at high altitude with golden sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-WbfGS1TYE9G8_vGKPmB9prF-9hJ9hvR4hRdaxEGO6E2Xm5WRTvWwrTkRAvubpMPhSFlKnqY1y1TF2G2lKr4pNIdDHk_wPhCODOCCNkt7ww2ZW-PbFZlS9hPdb0Vxy4Zol_XK19_wsXI6VStyhd4F_c9a8CfhCTXGDFTPu00ayGPX9DTdIwPK6NL3unMoYj09cIIx6MstnYUk11eprkkcLOuEt0X7jJtnQQThgUOYI5R9Y7YtfxpKEXpWK1Qe_XJuXCIrraE05K4"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500 mt-12">
+<img alt="Arco Antigo" class="w-full h-full object-cover sepia-effect" data-alt="sepia toned architectural detail of ancient Roman arches in the Syrian desert with dramatic shadows and dusty texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEbI-FdvW8dWHsj39ztTQtoC_BoROFdZFaZ9lmxNwToXNSseqyEw9O3U94xVDN5f5puRd3limnAXGEowFwtaqmMZBb0lOiNokCS815WUl02-F6bssJDlsPOEDVuRtdw906XJ3yXRAHMNOXklA3BTWzsL1JaTGsfuxNRfmh3loJLazUHJXcdDIkBL5Rfavwn-B40G5nwr7XeZeidRsiTxQGE-9MKILxQsGxNp2GqbylFsy0oBVIfdC6UqwKUXEP7RvPulbrdAe2Crg"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
+<img alt="Hospitalidade Moderna" class="w-full h-full object-cover" data-alt="luxury boutique hotel lounge in Dubai with modern minimalist design and warm golden ambient lighting at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJjuqN8Uer0qOpC3mKCZXWVY9cHLfwGLESGohZUNpeVwbfG0bdD4hEIOsC9EGYeehoP6ebWuAeM0giK0q4isIygVdAjFuo1R_qJKg9MzWUuXP0--T71_OqKIi5R-D9zmNkqZO0wtvMrPaTQIwordbe6d884K4WGdmeqyOptMqwjZZRw_SvdKEm2c8aDOwtcnRM-yfAIMyBDbZNqCyKdmAPHuGNadfHod9Jbxu5jp4ZaaG6-J921BoTlfdxmZoQyXdmCI35UxjTB_8"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500 mt-12">
+<img alt="Café Sírio" class="w-full h-full object-cover" data-alt="close up of ornate silver Syrian coffee pot and small ceramic cups on a colorful mosaic tiled tabletop with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-K6IvShe-a8nGmmennCX-M6IKltaZxbAOWbJ87qIbabsDxBe8X-qpIFWOhpaOu-ckgXTqWAHvheFg0WrKo-fQD8QmnMVqNuf_DV7u1GjYri1uWX0BnnSI5XfatQsD0kunWuTX5IucAq0TBqwta79mC8NrBWdDGFQ5SHMOZIcCZ_P59hr6jMuvFLY3hIt9vdX2oOija3gcnDvKPZCRqOPhXPFnpQ8mkt0XEKA3wrFVDVn5gUKvKMQW75iItZamQJj8KRJImmDjvEQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section: Editorial List -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+<div>
+<h4 class="font-headline text-3xl mb-12 border-b-2 border-primary-container inline-block pb-2">Nossos Pilares</h4>
+<div class="space-y-12">
+<div class="group">
+<span class="text-primary font-headline text-2xl block mb-2">01. Integridade Cultural</span>
+<p class="text-on-surface-variant leading-relaxed">Respeitamos a santidade dos costumes locais, garantindo que nossas jornadas fortaleçam e preservem a herança de cada destino que tocamos.</p>
+</div>
+<div class="group">
+<span class="text-primary font-headline text-2xl block mb-2">02. Voo Moderno</span>
+<p class="text-on-surface-variant leading-relaxed">Utilizamos o que há de mais moderno em aviação e facilidade digital para tornar a viagem tão fluida quanto as rotas da seda de antigamente eram lendárias.</p>
+</div>
+<div class="group">
+<span class="text-primary font-headline text-2xl block mb-2">03. A Ala Humana</span>
+<p class="text-on-surface-variant leading-relaxed">Nossas equipes de concierge não são apenas funcionários; são contadores de histórias e guardiões do seu conforto em todos os continentes.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-12 rounded-xl relative">
+<div class="pattern-overlay absolute inset-0 opacity-10"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="flight_takeoff">flight_takeoff</span>
+<h4 class="font-headline text-2xl mb-4">Junte-se à Próxima Caravana</h4>
+<p class="text-on-surface-variant mb-8 leading-relaxed">Seja em busca da majestade silenciosa de um amanhecer levantino ou do pulso elétrico de uma metrópole moderna, sua história começa conosco.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:bg-on-primary-fixed-variant transition-colors shadow-lg">Comece Sua Jornada</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full border-t border-stone-200 dark:border-stone-800">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="space-y-4">
+<div class="text-xl font-bold font-['Noto_Serif'] text-[#D4AF37]">AJ Wings</div>
+<p class="text-stone-500 dark:text-stone-400 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">
+                    Um Legado da Caravana Moderna. Unindo herança e horizonte através de viagens globais personalizadas.
+                </p>
+</div>
+<div>
+<h5 class="font-bold mb-4 text-on-surface">Empresa</h5>
+<ul class="space-y-3">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Conservação do Patrimônio</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Sustentabilidade</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Diário</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 text-on-surface">Jurídico</h5>
+<ul class="space-y-3">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Política de Viagem</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Privacidade</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 text-on-surface">Conecte-se</h5>
+<ul class="space-y-3">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:underline transition-all font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Fale Conosco</a></li>
+<li class="flex space-x-4 pt-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="public">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="mail">mail</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200 dark:border-stone-800 text-center text-stone-500 text-xs">
+            © 2024 AJ Wings. Um Legado da Caravana Moderna.
+        </div>
+</footer>
+</body></html>

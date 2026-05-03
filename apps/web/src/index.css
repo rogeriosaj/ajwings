@@ -1,0 +1,51 @@
+@import "@project/ui/globals.css";
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", var(--font-sans);
+  --font-serif: "Noto Serif", serif;
+  
+  --color-background: #fbf9f4;
+  --color-foreground: #1b1c19;
+  
+  --color-primary: #735c00;
+  --color-primary-foreground: #ffffff;
+  --color-primary-container: #d4af37;
+  
+  --color-secondary: #006a62;
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-container: #5ef6e6;
+
+  --color-surface: #fbf9f4;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container-highest: #e4e2dd;
+  --color-surface-variant: #e4e2dd;
+  
+  --color-on-surface: #1b1c19;
+  
+  /* Radii mapping */
+  --radius-md: 0.375rem;
+  --radius-xl: 0.75rem;
+}
+
+:root {
+  --background: #fbf9f4;
+  --foreground: #1b1c19;
+  --primary: #735c00;
+  --primary-foreground: #ffffff;
+  --secondary: #006a62;
+  --secondary-foreground: #ffffff;
+  --card: #f5f3ee;
+  --card-foreground: #1b1c19;
+  --border: #e4e2dd;
+  --ring: #d4af37;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.text-serif {
+  font-family: var(--font-serif);
+}

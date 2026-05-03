@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#006a62",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#1f4e4f",
+                    "primary": "#735c00",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#e4e2dd",
+                    "surface-dim": "#dbdad5",
+                    "primary-container": "#d4af37",
+                    "on-tertiary-fixed": "#002020",
+                    "on-secondary-fixed": "#00201d",
+                    "on-primary-fixed": "#241a00",
+                    "background": "#fbf9f4",
+                    "tertiary-fixed": "#bcebec",
+                    "inverse-on-surface": "#f2f1ec",
+                    "on-surface-variant": "#4d4635",
+                    "surface-container": "#f0eee9",
+                    "inverse-primary": "#e9c349",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#8dbbbc",
+                    "surface-container-high": "#eae8e3",
+                    "surface-tint": "#735c00",
+                    "surface-container-low": "#f5f3ee",
+                    "tertiary-fixed-dim": "#a0cfd0",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#30312e",
+                    "surface": "#fbf9f4",
+                    "surface-bright": "#fbf9f4",
+                    "secondary-container": "#5ef6e6",
+                    "on-tertiary-container": "#1d4c4d",
+                    "on-secondary-container": "#006f66",
+                    "on-background": "#1b1c19",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c19",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-primary-container": "#554300",
+                    "outline": "#7f7663",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffe088",
+                    "tertiary": "#386667",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#d0c5af",
+                    "on-secondary-fixed-variant": "#005049",
+                    "secondary-fixed": "#61f9e9",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#3adccc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 48px rgba(27,28,25,0.05);
+        }
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.5 10L40 12.5 30 15l-10-2.5L27.5 10 30 0zM0 30l10 2.5L12.5 40 15 30l-2.5-10L10 27.5 0 30zm60 0l-10-2.5L47.5 20 45 30l2.5 10L50 32.5 60 30zM30 60l-2.5-10L20 47.5 30 45l10 2.5-2.5 10L30 60z' fill='%23d0c5af' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md shadow-[0_32px_48px_rgba(27,28,25,0.05)]">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold font-['Noto_Serif'] italic text-[#D4AF37]">AJ Wings</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#D4AF37] font-bold border-b-2 border-[#D4AF37] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-wide" href="#">Destinos</a>
+<a class="text-stone-600 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-wide hover:text-[#40E0D0] transition-colors duration-300" href="#">Experiências</a>
+<a class="text-stone-600 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-wide hover:text-[#40E0D0] transition-colors duration-300" href="#">Patrimônio</a>
+<a class="text-stone-600 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-wide hover:text-[#40E0D0] transition-colors duration-300" href="#">Diário</a>
+<a class="text-stone-600 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-wide hover:text-[#40E0D0] transition-colors duration-300" href="#">Sobre</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="bg-[#D4AF37] text-white px-6 py-2.5 rounded-lg font-bold text-sm scale-102 active:scale-98 transition-all">Reservar Agora</button>
+<span class="material-symbols-outlined text-stone-600 cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[20%] brightness-75" data-alt="Stunning aerial view of the ancient city of Damascus at sunrise with soft golden light hitting the Umayyad Mosque minarets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ3eYnmiSJhytIB7NUmZ0_sjOl--CmZfaoCZFYyizWV6dV1v8j0MdqUTNihjryam7kVNaoQuo8zG72GFOU9rfXISery6_VG2CGeUNT2S5-jS0OuHuRlZcpRRHZ8YQlFdGIW2daCBBKmQ7hl0rxIg_RXa8mo3qruTD1CZ__avLBvGBWAue1fS1YanYic65Ya7CLiT8ddTyMDbkxcjswd4lkQIfCZFaD_bhc3fJSnQ51-Cszsh0qRVgw6lkIB5gAznrGR52SPwsa1bk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<h1 class="font-headline text-6xl md:text-7xl font-bold text-white max-w-3xl leading-[1.1] mb-6 drop-shadow-lg">
+                    Jornadas Selecionadas <br/><span class="italic text-[#D4AF37]">pela Herança</span>
+</h1>
+<p class="text-white/90 text-lg md:text-xl font-light max-w-xl leading-relaxed">
+                    Explore o Levante através das lentes do luxo atemporal. Cada caminho conta uma história; cada horizonte convida a uma nova descoberta.
+                </p>
+</div>
+</section>
+<!-- Travel Packages Section -->
+<section class="py-24 pattern-overlay">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-[#40E0D0] font-bold tracking-[0.2em] uppercase text-xs">Exclusivamente Curado</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mt-2 text-on-surface">Expedições Sob Medida</h2>
+</div>
+<p class="text-on-surface-variant max-w-md italic border-l-2 border-[#D4AF37] pl-6 font-light">
+                        "A caravana nunca para de verdade; ela apenas pausa para admirar a beleza do momento presente."
+                    </p>
+</div>
+<!-- Bento Grid of Tours -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Tour Card 1: Damascus (Featured) -->
+<div class="md:col-span-7 group relative overflow-hidden rounded-xl bg-surface-container-low editorial-shadow flex flex-col md:flex-row transition-all duration-500 hover:translate-y-[-4px]">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior courtyard of a traditional Damascene house with intricate mosaic tiles, a central fountain, and lush jasmine plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5R4t_xZkvFuPEIG2INmFQNytNQXameW2wXxaHZkozDO7KHNg17RTeVWl-DAoKZP6q5fYekTu0znkiNv19DFwNn1oo287ZwNK29zYvbmXoybzjCd7oXxUH8r2zBMZr5C42485rrp2ZdZ1bVTRPmfy4Iwj0UM1xT8luChqhy2XgQNdR5DjHWS2hl7kQyo992vZLltUosXeB_bEdvi-ItwdQjYx5ApwJLaKqJe7yE5Mmsq6WvPXkPT6ifwpW5LlP8yFaXqnE-gHyTU4"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Escolha Histórica</span>
+<span class="font-headline text-[#D4AF37] font-bold text-xl">$2.450</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3">Tour Histórico de Damasco</h3>
+<div class="flex items-center gap-4 mb-6 text-sm text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> 8 Dias</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Cidade Antiga</span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[#40E0D0] text-sm">check_circle</span>
+<span>Acesso privado ao Tesouro Omíada</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[#40E0D0] text-sm">check_circle</span>
+<span>Tour em oficina artesanal no Souq Al-Hamidiyah</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[#40E0D0] text-sm">check_circle</span>
+<span>Estadia de luxo em palácio restaurado do séc. XVII</span>
+</li>
+</ul>
+<button class="w-full text-[#40E0D0] border border-[#40E0D0] py-3 rounded-lg font-bold text-sm hover:bg-[#40E0D0] hover:text-white transition-all duration-300">Ver Detalhes</button>
+</div>
+</div>
+<!-- Tour Card 2: Mediterranean Bliss -->
+<div class="md:col-span-5 group relative overflow-hidden rounded-xl bg-surface-container-low editorial-shadow flex flex-col transition-all duration-500 hover:translate-y-[-4px]">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sparkling turquoise waters of the Mediterranean coast in Latakia with white limestone cliffs and a luxury yacht in distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOpKYTGTPwlpMfQ6ui2f4K0Sj7OjEuOtAPRqqRWngZ1ZgxsyrDn1pdREZsjakb1020_tGBS-acgpsYYi6XJzbQWlV6UMX1C93IqBgSULzWnPmPD7W0EB6aEy0gsQH6zTf7V9YeFv-0tdRCqZ-dCLPLBtei60ok1K-2vlXHlEpyYsbnuZpTTwNrOueBObUtgQj6ReqsBmTpgKVbydmXNn5s-Id3k4gngopvuI9gtKcK0sXBfMcwE8JjbKxZqMRrls-kXOSdzmumBcs"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg font-headline text-[#D4AF37] font-bold">$3.100</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-bold mb-3">Refúgio Mediterrâneo</h3>
+<div class="flex items-center gap-4 mb-6 text-sm text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> 5 Dias</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">waves</span> Retiro Costeiro</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                                Relaxe onde as florestas de pinheiros encontram o mar azul. Acesso a praia privativa, frutos do mar gourmet e cruzeiros ao pôr do sol.
+                            </p>
+<button class="mt-auto w-full text-[#40E0D0] border border-[#40E0D0] py-3 rounded-lg font-bold text-sm hover:bg-[#40E0D0] hover:text-white transition-all duration-300">Ver Detalhes</button>
+</div>
+</div>
+<!-- Tour Card 3: Palmyra's Ghost -->
+<div class="md:col-span-5 group relative overflow-hidden rounded-xl bg-surface-container-low editorial-shadow flex flex-col transition-all duration-500 hover:translate-y-[-4px]">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Ancient Roman ruins of Palmyra at dusk with deep orange sky and long shadows falling across the colonnade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACLvkiht2A2psV353P7L0dVZoDqkZ1LzBuubtQzpOb-yV1NZ7p7-PA-5ZJEaO0s-oqu8eUR58v5-TvkdqFA_bxPfrgDo5ZL0ss4Py0irdS_CMtWCFnosyxyCjTuU91aKbUTdUxmSIGLSn81d91iO2kGtpcndb9NnE2DTEkbSxZOvkW2l_l9bQZyXFSUV2bl3rfwTdBorDl1bxluqbQFerDiRUtepz3Dsr_yQ773t3xgKs9IPKUrkK_VLF0WZsJAJwQXlTfinmIr6w"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg font-headline text-[#D4AF37] font-bold">$1.890</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-bold mb-3">Ecos de Palmira</h3>
+<div class="flex items-center gap-4 mb-6 text-sm text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> 4 Dias</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">history_edu</span> Arqueologia</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                                Testemunhe as grandiosas colunas do império de Zenóbia. Uma jornada através do silêncio do deserto e de maravilhas arquitetônicas.
+                            </p>
+<button class="mt-auto w-full text-[#40E0D0] border border-[#40E0D0] py-3 rounded-lg font-bold text-sm hover:bg-[#40E0D0] hover:text-white transition-all duration-300">Ver Detalhes</button>
+</div>
+</div>
+<!-- Tour Card 4: Aleppo Gastronomy -->
+<div class="md:col-span-7 group relative overflow-hidden rounded-xl bg-surface-container-low editorial-shadow flex flex-col md:flex-row transition-all duration-500 hover:translate-y-[-4px]">
+<div class="md:w-1/2 p-8 flex flex-col order-2 md:order-1">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Masterclass Culinária</span>
+<span class="font-headline text-[#D4AF37] font-bold text-xl">$1.600</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3">Sabores de Aleppo</h3>
+<div class="flex items-center gap-4 mb-6 text-sm text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">restaurant</span> 6 Dias</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">local_fire_department</span> Rota das Especiarias</span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[#40E0D0] text-sm">check_circle</span>
+<span>Preparo de Kebbeh com chefs mestres</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[#40E0D0] text-sm">check_circle</span>
+<span>Degustação privada no distrito da Cidadela</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[#40E0D0] text-sm">check_circle</span>
+<span>Visita às antigas fábricas de sabão de louro</span>
+</li>
+</ul>
+<button class="w-full text-[#40E0D0] border border-[#40E0D0] py-3 rounded-lg font-bold text-sm hover:bg-[#40E0D0] hover:text-white transition-all duration-300">Ver Detalhes</button>
+</div>
+<div class="md:w-1/2 overflow-hidden h-64 md:h-auto order-1 md:order-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Traditional Aleppo appetizers including kibbeh, hummus, and muhammara served on handmade copper plates with warm flatbread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPBI5Y4BuNT8dVKzz3EosN1nLVoby8ojVz4MFSFny_3DTcolrCI5wkvYtaM8XVMGFixtSbU4ReFa1DEkVuFT4w88RN1jZwxdhdAxEq5Fj4IW5xgc5fowCQZoAJEiJcXwNRPmojkbyHE3Ob2ezsaO44NyUxnfdrBPwmcJA5n9YCM04sBni8KF0gSjxd73VlbfIwmC89GVplNAZzC_aOkTx7SbBff8qWr5_O6fvTlNO1sg_CnlDhSZFdfG_INSiAPdpa5dNPU340OG0"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="absolute -top-12 -left-8 text-9xl font-headline text-on-surface-variant/10 pointer-events-none">“</div>
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold text-on-surface">Ecos da Jornada</h2>
+<p class="text-on-surface-variant mt-4 font-light">De quem já percorreu os caminhos das caravanas modernas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Testimonial 1 -->
+<div class="bg-surface p-10 rounded-xl relative editorial-shadow border-t-4 border-[#D4AF37]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-stone-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a middle-aged man with refined style, smiling warmly against a soft architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPRnci3kUrrzXA7fLiTMq10bNUa4H9Ece4NsiD9w1yiC6Eox_Qco_ttBDwPQGZdj0vNamexJ4_5nOn3zKqUvg9a4iRpzd6HJSj7M34IuSN7f70KS_4yyRZrMrDXx4Xbw-YiL2dLdKf7X2Zp6MSxjMWRAXOa1O0caJ3UEZKNcCzy_DBbmujzZRAGcpLvgiyaMeC8spG1GFUsBfyKU0gWK56o2Gb1ftm5kDIHnf6iJbJ8YZMFa1JABXXkI70is94awlHhbHtkXodrbg"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Julian Montgomery</h4>
+<p class="text-xs text-on-surface-variant italic">Explorador, Reino Unido</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-loose font-light">
+                            "O Tour Histórico de Damasco foi mais que uma viagem; foi um despertar sensorial. Ficar no palácio restaurado fez-me sentir parte da história que estava explorando. Serviço impecável."
+                        </p>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface p-10 rounded-xl relative editorial-shadow border-t-4 border-[#40E0D0]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-stone-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young woman with a thoughtful expression, wearing linen travel attire in natural outdoor light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDs3saIKnqIUUAFN36t2zy9pMyyU3GMPl_3SBCMyPqNLvDZhjYER3BGfH_cxV3PmWs6aiyCBktk-dBgq_bYPbP0MRFYF6y8LWi7GfvB57gsr9XAItu5MdhHpXO3iIX2ildbn-gyiVbwN-B0cSbrjU8SzAx1h4Ko8JsQZ96vHAB0h57QOBf2jJ9AWE4CL0DK6hX0_GMC8innCsSWjI59u3byHJzsjCRVCdoe88vJ0He7p1uWLMFa4MnlXkANTR6aV_Y_ZuOXSiH1I"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Elena Rossi</h4>
+<p class="text-xs text-on-surface-variant italic">Arquiteta, Itália</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-loose font-light">
+                            "Como arquiteta, ver Palmira ao entardecer foi uma experiência espiritual. A AJ Wings cuidou da logística perfeitamente, permitindo-me focar inteiramente na beleza das ruínas. Realmente sofisticado."
+                        </p>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface p-10 rounded-xl relative editorial-shadow border-t-4 border-[#D4AF37]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-stone-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Handsome man with a friendly smile, clean-shaven, wearing a navy polo shirt in a sunlit setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5dFOJy3NhpEq_BOyRX5pV3cFYlMiGlecN6QQ4kvXC04ABoj0yZ905B6VRjvckWGvRXSdEcZQ4EOuFcCY56r0vXuYM8458tIut8RS4YiuUhwKzSAyC0x9ietX6kpf-kwbf6IeS71m5aszg7GsBej7AVUBbRm47t9ypLRlVht7oYNJ6SpR2AoivtcZBbrNKPLnMYsyek7jwcdFfaaQPior9ZxQzWzRQGnRMKurNlTUEkFdDtzWolhE3holijyafgzGMXtOvdh9YhbA"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">David Chen</h4>
+<p class="text-xs text-on-surface-variant italic">Fotógrafo, Canadá</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-loose font-light">
+                            "O tour gastronômico de Aleppo superou todas as expectativas. O acesso que tivemos a cozinhas privadas e oficinas tradicionais é algo que eu não conseguiria encontrar sozinho. Recomendo muito."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="bg-[#1b1c19] rounded-2xl p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pattern-overlay"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-headline text-3xl md:text-5xl text-white mb-6">Junte-se à Próxima Caravana</h2>
+<p class="text-white/70 font-light mb-10 leading-relaxed">
+                        Assine nosso diário para acesso exclusivo a histórias de patrimônio, novos destinos e ofertas privadas de viagem.
+                    </p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-white/5 border border-white/20 rounded-lg px-6 py-4 text-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none" placeholder="Seu endereço de e-mail" type="email"/>
+<button class="bg-[#D4AF37] text-white px-10 py-4 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-[#c4a030] transition-colors">Inscrever-se</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="space-y-6">
+<div class="text-xl font-bold font-['Noto_Serif'] text-[#D4AF37]">AJ Wings</div>
+<p class="text-stone-500 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">
+                    Preservando o legado da Rota da Seda através de experiências de viagem curadas, sustentáveis e ultra-luxuosas.
+                </p>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-sm tracking-widest uppercase">Links Rápidos</h5>
+<ul class="space-y-2">
+<li><a class="text-stone-500 text-sm hover:text-[#D4AF37] hover:underline transition-all underline-offset-4" href="#">Destinos</a></li>
+<li><a class="text-stone-500 text-sm hover:text-[#D4AF37] hover:underline transition-all underline-offset-4" href="#">Galeria de Experiências</a></li>
+<li><a class="text-stone-500 text-sm hover:text-[#D4AF37] hover:underline transition-all underline-offset-4" href="#">Conservação do Patrimônio</a></li>
+<li><a class="text-stone-500 text-sm hover:text-[#D4AF37] hover:underline transition-all underline-offset-4" href="#">Sustentabilidade</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-sm tracking-widest uppercase">Políticas</h5>
+<ul class="space-y-2">
+<li><a class="text-stone-500 text-sm hover:text-[#D4AF37] hover:underline transition-all underline-offset-4" href="#">Política de Viagem</a></li>
+<li><a class="text-[#D4AF37] underline underline-offset-4 text-sm" href="#">Carta de Sustentabilidade</a></li>
+<li><a class="text-stone-500 text-sm hover:text-[#D4AF37] hover:underline transition-all underline-offset-4" href="#">Termos de Serviço</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-sm tracking-widest uppercase">Contato</h5>
+<p class="text-stone-500 text-sm">Grand Bazar, Damasco, Síria</p>
+<p class="text-stone-500 text-sm">+963 (11) 222-JOURNEY</p>
+<div class="flex space-x-4 pt-4">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-[#D4AF37]">public</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-[#D4AF37]">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-stone-500 text-sm">© 2024 AJ Wings. Um Legado da Caravana Moderna.</span>
+<div class="flex gap-6">
+<span class="text-stone-400 text-xs uppercase tracking-tighter">Luxo</span>
+<span class="text-stone-400 text-xs uppercase tracking-tighter">Patrimônio</span>
+<span class="text-stone-400 text-xs uppercase tracking-tighter">Exclusividade</span>
+</div>
+</div>
+</footer>
+</body></html>
